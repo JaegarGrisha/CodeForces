@@ -6,17 +6,9 @@ int main(void) {
     int t;
     cin >> t;
     while(t--) {
-        int n, k;
+        long long n, k;
         cin >> n >> k;
-        bool possible = true;
-        if(n<k*k) {
-            possible = false;
-        }
-        else {
-            if(n%2!=k%2) { 
-                possible = false;
-            }
-        }
+        bool possible = n>=k*k && n%2==k%2;
         cout << (possible ? "YES" : "NO") << endl;
     }
     return 0;
